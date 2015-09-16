@@ -3,10 +3,15 @@
 
 <p>Click the button to display the times clicked.</p>
 
-<input type="button" onclick="counterClick(1)" value="Click me!">
-<input type="button" onclick="buyAuto()" value="Buy AutoClick!">
-<p>AutoClicks: <span id="autoClick">0</span><br />
-Cost: <span id="autoCost">10</span></p>
+<input type="button" onclick="counterClick(number)" value="Click me!"><br />
+<input type="button" onclick="buyAuto()" value="Buy AutoClick!"><br />
+<input type="button" onclick="buyClickAmount()" value="Buy +1 per Click">
+<p>
+AutoClicks: <span id="autoClicks">0</span><br />
+Cost: <span id="autoCost">10</span><br />
++1 Click: <span id="addClickAmount">0</span><br />
+Cost: <span id="nextClickCost">10</span>
+</p>
 
 <script type = "text/javascript" src="click.js"></script>
 
