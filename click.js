@@ -3,6 +3,22 @@ var autoClicks = 0;
 var number = 1;
 var addClickAmount = 0;
 
+function startTime() {
+    var today=new Date();
+    var h=(today.getHours() - today.getHours());
+    var m=(today.getMinutes() - today.getMinutes());
+    var s=(today.getSeconds() - today.getMinutes());
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('loadedSeconds').innerHTML = h+":"+m+":"+s;
+    var t = setTimeout(function(){startTime()},500);
+}
+
+function checkTime(i) {
+    if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+
 function buyAuto(){
     var autoCost = Math.floor(10 * Math.pow(1.1, autoClicks));       //works out the cost of auto click
     if (click >= autoCost) {                                         //checks that the palyer can afford the auto click
@@ -33,6 +49,10 @@ function buyClickAmount() {
     
     number++;                                                        //adds +1 to number which will increase amount added when 'Click Here' button is clicked.     ~~Credit to Michael Reese~~
 }
+
+
+
+
 
 window.setInterval(function(){                                       //adds refresh to page everyone 1 second (1000ms)
     counterClick(autoClicks);
