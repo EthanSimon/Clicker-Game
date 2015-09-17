@@ -1,15 +1,18 @@
 <html>
 <body onload="startTime()">
 
+<p>
+Time Played:</p> <p id="totalTime"></span><br /><br />
 <p>Click the button to display the times clicked.</p>
 
-<input type="button" onclick="counterClick(number)" value="Click me!"><br />
+<input type="button" onclick="counterClick(number)" value="Click me!"><br /><br />
+<p id="click"></p><br />
+
 <input type="button" onclick="buyAuto()" value="Buy AutoClick!"><br />
-<input type="button" onclick="buyClickAmount()" value="Buy +1 per Click">
-<p>
-Time Played: <span id="loadedSeconds">0</span><br />
 AutoClicks: <span id="autoClicks">0</span><br />
-Cost: <span id="autoCost">10</span><br />
+Cost: <span id="autoCost">10</span><br /></p>
+
+<input type="button" onclick="buyClickAmount()" value="Buy +1 per Click"><br />
 +1 Click: <span id="addClickAmount">0</span><br />
 Cost: <span id="nextClickCost">10</span>
 </p>
