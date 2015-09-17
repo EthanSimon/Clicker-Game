@@ -1,5 +1,5 @@
 <html>
-<body>
+<body onload="startTime()">
 
 <p>Click the button to display the times clicked.</p>
 
@@ -7,6 +7,7 @@
 <input type="button" onclick="buyAuto()" value="Buy AutoClick!"><br />
 <input type="button" onclick="buyClickAmount()" value="Buy +1 per Click">
 <p>
+Time Played: <span id="loadedSeconds">0</span><br />
 AutoClicks: <span id="autoClicks">0</span><br />
 Cost: <span id="autoCost">10</span><br />
 +1 Click: <span id="addClickAmount">0</span><br />
